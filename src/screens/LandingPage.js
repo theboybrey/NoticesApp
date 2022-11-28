@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const index = () => {
+const LandingPage = () => {
   return (
     <View>
-      <Text>index</Text>
+      <Text>LandingPage</Text>
     </View>
   )
 }
 
-export default index
+export default LandingPage
 
 const styles = StyleSheet.create({})
