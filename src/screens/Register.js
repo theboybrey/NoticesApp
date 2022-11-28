@@ -1,12 +1,14 @@
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native'
 import React from 'react'
 
-const Register = () => {
-  return (
-    <View>
-      <Text>Register</Text>
-    </View>
-  )
+export class Register extends Component {
+    render() {
+        return (
+            <View>
+
+            </View>
+        )
+    }
 }
 
 export default Register
