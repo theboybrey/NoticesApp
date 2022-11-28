@@ -28,6 +28,9 @@ export class Register extends Component {
                     secureTextEntry={true}
                     onChangeText={(password) => this.setState({ password })}
                 />
+                <Button 
+                onPress={() => onSignUp()}
+                title='Register'/>
             </View>
         )
     }

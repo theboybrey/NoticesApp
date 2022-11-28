@@ -5,7 +5,7 @@ const LandingPage = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Button
-                title='Register'
+                title='Join Us Now'
                 onPress={() => navigation.navigate('Register')}
             />
             <Button
