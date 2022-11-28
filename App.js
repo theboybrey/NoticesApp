@@ -3,9 +3,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import LandingPage from './src/screens/LandingPage';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import * as firebase from 'firebase';
+import { auth, firebase, firestore, functions, storage, database } from 'firebase';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import Register from './src/screens/Register';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -20,11 +21,11 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
-if(firebase.apps.length === 0) {
-  firebase.initializeApp(firebaseConfig)
-}
+// if (firebase.apps.length === 0) {
+//   firebase.initializeApp(firebaseConfig)
+// }
 
 
 const Stack = createStackNavigator();
@@ -34,6 +35,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName='LandingPage'>
         <Stack.Screen name='LandingPage' component={LandingPage} options={{ headerShown: false }} />
+        <Stack.Screen name='Register' component={Register} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
 
